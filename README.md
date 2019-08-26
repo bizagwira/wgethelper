@@ -8,5 +8,6 @@ cd build
 cmake ../
 make
 # Find the exacutable into the <wgethelper-repo-path>/bin
+cd ../bin
 ```
 
