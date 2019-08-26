@@ -7,5 +7,6 @@ mkdir build
 cd build
 cmake ../
 make
+# Find the exacutable into the <wgethelper-repo-path>/bin
 ```
-Find the exacutable into the <wgethelper-repo-path>/bin
+
