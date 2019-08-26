@@ -1,0 +1,31 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 2.8.3)
+
+PROJECT (httpwget)
+
+SET(
+    CMAKE_BUILD_TYPE
+    Release
+)
+
+#Bring the headers into the project
+INCLUDE_DIRECTORIES(include)
+
+FILE (
+	GLOB
+	SOURCES
+	src/*.cpp
+)
+
+SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++14")
+
+# Set the output folder where your program will be created
+SET (CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+SET (EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+SET (LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
+ADD_EXECUTABLE (${PROJECT_NAME} ${SOURCES})
+
+TARGET_LINK_LIBRARIES(
+    ${PROJECT_NAME}
+    curl
+)
